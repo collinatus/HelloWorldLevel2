@@ -19,13 +19,13 @@ function mapResourceToMime(resource) {
   var ext = resource.substr(resource.indexOf('.'));
   var mime;
   switch(ext) {
-    case 'html': mime = 'text/html';
+    case '.html': mime = 'text/html';
       break;
-    case 'jpg': mime = 'img/jpeg';
+    case '.jpg': mime = 'image/jpeg';
       break;
     default: mime = 'text/plain';
   }
-  return ext;
+  return mime;
 }
 
 function requestHandler(req, res) {
